@@ -22,10 +22,11 @@ finally:
 
 # Drugi kod
 
+import sys
 from socket import *
 
-serverName= 'localhost'
-serverPort= 12000
+serverName= sys.argv[1]
+serverPort= int(sys.argv[2])
 
 clientSocket= socket(AF_INET, SOCK_DGRAM)
 message= input('Input lowercase sentence:\n')

@@ -19,13 +19,14 @@ while True:
 
 # Drugi kod
 
+import sys
 from socket import *
 
-serverName = 'localhost'
-serverPort= 12000
+serverName = sys.argv[1]
+serverPort = int(sys.argv[2])
 
 serverSocket= socket(AF_INET, SOCK_DGRAM)
-serverSocket.bind(('localhost',serverPort))
+serverSocket.bind((serverName,serverPort))
 print("The server is ready to receive\n")
 
 while True:
