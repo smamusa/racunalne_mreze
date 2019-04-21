@@ -22,6 +22,7 @@ while True:
 import sys
 from socket import *
 
+print (sys.argv[0])
 serverName = sys.argv[1]
 serverPort = int(sys.argv[2])
 
